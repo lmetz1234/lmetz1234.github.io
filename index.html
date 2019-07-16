@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Launa's Land </title>
+       <style>
+            body {
+                background: rgb(4, 3, 3);
+                color: rgb(4, 3, 3);
+                padding: 10px;
+                font-family: fantasy;
+                
+           
+            }
+            .interests{ 
+                border: 10px inset purple; 
+                padding:20px;
+                text-align:center;
+            }
+            .content{
+                text-align:center;
+        
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+                color:blue;
+                text-align:center;
+                font-style:oblique;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+                
+            }
+
+            /* navigation menu */
+            nav {
+                background: rgb(209, 33, 191);
+                margin-bottom: 20px;
+                margin-top: 10px;
+                display: flex;
+                padding: 10px;
+            }
+            
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+                
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 20px;
+                border: outset 5px black;
+               
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+                
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style> 
+    </head>
+    <body>
+        <div id ="all-contents">
+            <nav>
+                <header>Launa's Land</header>
+               <ul>
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="portfolio.html">Portfolio</a></li>
+               </ul> 
+            </nav>
+            
+            <main>
+                <div class ="sidebar">
+                    <img src=https://store-images.s-microsoft.com/image/apps.2544.13768621950225582.167ba0c8-6eb8-47bb-96fe-278c89bf0dc9.ea440c13-fd1d-4705-b62c-9bfd9054b8b3?w=672&h=378&q=80&mode=letterbox&background=%23FFE4E4E4&format=jpg> 
+                </div>
+                
+                <div class ="content">
+                    <header>Launa C. Metz</header>
+                    <p> Educator at West St. Mary High School</p>
+                    <section class="interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>Planning Events</li>
+                            <li>Binge-Watching Netflix</li>
+                            <li>Coaching and Mentoring</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+    </body>
+</html>

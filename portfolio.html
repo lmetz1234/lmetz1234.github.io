@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Launa's Land</title>
+        <style>
+            body {
+                background: rgb(4, 3, 3);
+                color: rgb(4, 3, 3);
+                padding: 10px;
+                font-family: fantasy;
+                
+           
+            }
+            .interests{ 
+                border: 10px inset purple; 
+                padding:20px;
+                text-align:center;
+            }
+            .content{
+                text-align:center;
+        
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+                color:blue;
+                text-align:center;
+                font-style:oblique;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+                
+            }
+
+            /* navigation menu */
+            nav {
+                background: rgb(209, 33, 191);
+                margin-bottom: 20px;
+                margin-top: 10px;
+                display: flex;
+                padding: 10px;
+            }
+            
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+                
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 20px;
+                border: outset 5px black;
+               
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+                
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            /* portfolio styles */
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            #portfolio li {
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            #portfolio li:hover {
+                background: #eee;
+            } 
+            
+            #portfolio a {
+                text-decoration: none;
+                color: #454545;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style> 
+    </head>
+    <body>
+        <div id="all contents">
+            <nav>
+                <header>Launa's Portfolio</header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="content">
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
+                    
+                </ul>
+                </div>
+            </main>
+        </div>
+
+    </body>
+</html>
