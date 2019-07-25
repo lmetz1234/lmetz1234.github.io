@@ -18,7 +18,9 @@ var background = function (window) {
 
         // container which will be returned
         var background;
-        
+        var tree; 
+        var floats = []; 
+    
         // ANIMATION VARIABLES HERE:
         
         
@@ -34,16 +36,75 @@ var background = function (window) {
 
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'yellow');
+            var backgroundFill = draw.rect(canvasWidth, canvasHeight,'skyBlue');
             background.addChild(backgroundFill);
             
+            
+            
+          
             // TODO: 3 - Add a moon and starfield
+            // var cloud = draw.bitmap('img/cloud.png');
+            // cloud.x = 200;
+            // cloud.y = 75;
+            // cloud.scaleX = .5;
+            // cloud.scaleY = .5;
+            // background.addChild(cloud);
             
             
+            var cloud;
+            for (var i = 0; i < 10; i++){
+                cloud = draw.bitmap('img/cloud.png');
+                cloud.x = canvasWidth * Math.random();
+                cloud.y = 30 * Math.random();
+                cloud.scaleX = .5;
+                cloud.scaleY = .5;
+                background.addChild(cloud);
+            } 
+                
+
             // TODO: 5 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
+            
+            var floatHeight = 300;
+            var float;
+            for (var i = 0; i < 5; i++){
+                float = draw.bitmap('img/mardi-gras-float.png');
+                float.x = 500*i;
+                float.y = 200;
+                float.scaleX = .35;
+                float.scaleY = .35;
+                background.addChild(float);
+                floats.push(float);
+            }
+            
+            
+            
             
             
             // TODO 4: Part 1 - Add a tree
+             
+            tree = draw.bitmap('img/tree-with-beads.png');
+            tree.x = 300;
+            tree.y = 200;
+            tree.scaleX = .35; 
+            tree.scaleY = .35;
+            background.addChild(tree);
+            
+            // tree = draw.bitmap('img/tree-with-beads.png');
+            // tree.x = 900;
+            // tree.y = 200;
+            // tree.scaleX = .35; 
+            // tree.scaleY = .35;
+            // background.addChild(tree);
+            
+            tree = draw.bitmap('img/tree-with-beads.png');
+            tree.x = 1500;
+            tree.y = 200;
+            tree.scaleX = .35; 
+            tree.scaleY = .35;
+            background.addChild(tree);
+            
+            
+            
             
         }
         
@@ -56,9 +117,18 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 4: Part 2 - Move the tree!
+            tree.x = tree.x + 0; 
             
             
             // TODO 5: Part 2 - Parallax
+            for(var i = 0; i < floats.length; i++){
+                if(floats[i].x< -600){
+                    floats[i].x = canvasWidth;
+                }
+                floats[i].x = floats[i].x - 1;
+            }
+            
+            
             
 
         }
